@@ -1,0 +1,102 @@
+:root {
+    --main-height:35%;
+}
+
+::selection {
+    background-color: #FEC260;
+}
+
+body {
+    background-color: #F7ECDE;
+}
+
+.main-font{
+    font-family: 'Pacifico', cursive;
+}
+
+.second-font{
+    font-family: 'Righteous', sans-serif;
+}
+
+.overlayFont {
+    font-family: 'Bree Serif', serif;
+}
+
+
+/* head section  */
+h1 {
+    font-size: 50px;
+    color: #352e28;
+    isolation: isolate;   
+}
+h1::before {
+    content: "";
+    width: 100%;
+    height: var(--main-height);
+    position: absolute;
+    background-color: #FEC260;
+    bottom: 0;
+    left: 0;
+    mix-blend-mode: multiply;
+    transition: .3s ease-in-out;
+}
+/* head section  */
+
+/* bookmark section  */
+.bookmark {
+    border-top: 3px dotted #352e28;
+    border-bottom: 3px dotted #352e28;
+}
+
+.bookmark h2 {
+    background: -webkit-linear-gradient(#17c96a, #FEC260);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+/* bookmark section  */
+
+/* input section  */
+.validation:focus {
+    box-shadow: 0 0 0 0.25rem rgba(245, 184, 85, 0.5);
+}
+
+.validation.notValid:focus {
+    box-shadow: 0 0 0 0.25rem rgba(235, 26, 26, 0.5);
+}
+
+.validation.notValid {
+    background-image: url(../images/wrong.webp);
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+}
+
+.validation.valid:focus {
+    box-shadow: 0 0 0 0.25rem rgba(6, 247, 46, 0.5);
+}
+
+.validation.valid {
+    background-image: url(../images/checkmark-png-5.png);
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+}
+/* input section  */
+#overlayError {
+    background-color: rgba(0, 0, 0, .9);
+}
+
+.overlay .close-sec span {
+    width: 25px;
+    height: 25px;
+}
+
+.overlay .close-sec i {
+    cursor: pointer;
+}
+
+@media all and (max-width:767px) {
+    .overlay {
+        width: 250px !important;
+    }
+    }
